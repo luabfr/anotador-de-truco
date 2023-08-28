@@ -1,5 +1,7 @@
 # To do
-> Crear un GIT
+x Crear un GIT
+> Subirlo a la Play Store
+ - Investigar: como agregar publicidad
 
 > Nueva partida, 
 > Opciones visuales, 
@@ -16,4 +18,7 @@
 - opcion: no permitir que se apague la pantalla
 - opcion: colores diferentes para cada equipo
 - opcion: habilitar sonido. + > sonido diferentes para cada equipo
+
+
+// esta linea de texto es solo para commitear al nuevo branch. luego borrar
 	
