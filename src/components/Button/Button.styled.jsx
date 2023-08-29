@@ -37,7 +37,7 @@ export const MainButtonText = styled.Text`
   text-align: center;
   font-size: 32px;
 	font-weight: bold;
-	font-family: 'Poppins-Bold';
+	/* font-family: 'Poppins-Bold';*/
 	color: white;
 `;
 
