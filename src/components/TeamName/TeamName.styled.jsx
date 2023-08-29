@@ -10,7 +10,7 @@ export const TeamNameContainer = styled.View`
 export const TNTitle = styled.Text`
 	font-size: 32px;
 	font-weight: bold;
-	fontFamily: 'Poppins-Bold';
+	/* fontFamily: 'Poppins-Bold';*/
 	color: white;
   display: flex;
 	justify-content: center;

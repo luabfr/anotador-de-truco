@@ -3,8 +3,15 @@ import { Text,View } from 'react-native';
 import { useSelector } from 'react-redux';
 import { DisplayMatchsticksContainer,StickGroup,StickTop,StickRight,StickBottom,StickLeft,StickDiagonal } from './DisplayMatchsticks.styled';
 import styled from 'styled-components/native';
+import { Dimensions } from 'react-native';
 
+// Obtén las dimensiones de la pantalla
+const windowDimensions = Dimensions.get('window');
 
+// Altura total de la pantalla
+const screenHeight = windowDimensions.height;
+
+console.log('screenHeight', screenHeight)
 
 const DisplayMatchsticks = ({ team }) => {
 	const teamPoints = useSelector((state) => state.teamsReducer.teams[team].points)
