@@ -22,7 +22,7 @@ const HomeScreen = ({ navigation }) => {
 		<MainContainer >
 			<LogoMain /> 
 			<MainButton label="Iniciar partida" onPress={() => navigation.navigate('MainMenu')} />
-			<MainButton label={"Opciones Visuales"} onPress={() => navigation.navigate('OptionsMenu')} />
+			{/* <MainButton label={"Opciones Visuales"} onPress={() => navigation.navigate('OptionsMenu')} /> */}
 			<ButtonCloseApp />			
 		</MainContainer>
 	);

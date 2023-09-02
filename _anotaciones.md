@@ -1,4 +1,13 @@
 # To do
+> Terminar MVP:
+ > Cuando se llega a 30 
+ 	- tiene que aparece un MODAL que diga WIN. 
+		- El MODAL debe tener un boton de "Ver tablero". 
+			(muestra el tablero con los puntos actuales, y permite al user borrar o agregar puntos, en caso de que hayan puesto "30 puntos" sin querer) .
+		- El MODAL debe tener un boton de "Nueva partida". 
+			(reinicia los puntos de ambos equipos para comenzar una nueva partida)
+
+
 x Crear un GIT
 > Subirlo a la Play Store
  - Investigar: como agregar publicidad

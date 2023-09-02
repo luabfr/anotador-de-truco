@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "AnotadorDeTruco",
-    "slug": "AnotadorDeTruco",
+    "slug": "anotador-de-truco",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.luabfr.anotadordetruco"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "52c98a91-16b3-43fc-8b83-bf5c630e70b5"
+      }
+    },
+    "owner": "luabfr"
   }
 }
