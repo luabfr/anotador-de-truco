@@ -29,7 +29,12 @@ export default function App() {
               headerTitleStyle: { fontWeight: 'bold' } ,
               headerShadowVisible: false, 
             }}>
-            <RootStack.Screen name="MainMenu" component={ScreenMatch} options={{ title: "Ver Menu" }} />
+            <RootStack.Screen 
+              name="MainMenu" 
+              component={ScreenMatch} 
+              options={{
+                title: "Ver Menu"                
+              }} />
           </RootStack.Group>
           <RootStack.Group 
             screenOptions={{ 

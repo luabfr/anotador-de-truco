@@ -44,7 +44,9 @@ export const ButtonsGroup = styled.View`
 	display: flex; 
   justify-content: center;
   align-items: center;
-	height: 100%;
+	height: 120%;
 	width: 100%;
+	top: -20%;
 	background: #6666;
+	z-index: 100;
 `;
