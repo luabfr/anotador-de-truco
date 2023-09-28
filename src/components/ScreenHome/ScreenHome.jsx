@@ -1,27 +1,33 @@
 import React from 'react';
-import { View  } from 'react-native';
 import ButtonCloseApp from '../ButtonCloseApp/ButtonCloseApp';
 import { MainButton } from '../Button/Button.styled';
 import LogoMain from '../LogoMain/LogoMain';
-import styled from 'styled-components/native';
-
-const MainContainer = styled.View`
-	display: flex;
-	height: 100%;
-	flex-direction: column;
-	background: black;
-	padding-top: 40px;
-	padding-bottom:	 40px;
-`;
-
+import { MainContainer } from './ScreenHome.styled';
+import { useSelector,useDispatch } from 'react-redux';
+import { resetPoints } from '../../store/actions';
 
 
 const HomeScreen = ({ navigation }) => {
-	
+	const teamAPoints = useSelector((state) => state.teamsReducer.teams[0].points)
+	const teamBPoints = useSelector((state) => state.teamsReducer.teams[1].points)
+
+	const matchStarted = ((teamAPoints != 0) || (teamBPoints != 0)) ? true : false;
+
+	const dispatch = useDispatch();
+	const handleNewMatch = () => {
+		dispatch(resetPoints());
+		navigation.navigate('MainMenu')
+	};
+
+
 	return (
 		<MainContainer >
 			<LogoMain /> 
-			<MainButton label="Iniciar partida" onPress={() => navigation.navigate('MainMenu')} />
+			<MainButton label="Nueva partida" onPress={() => handleNewMatch() } />
+
+			{ matchStarted &&
+				<MainButton label="Volver a la partida" onPress={() => navigation.navigate('MainMenu')} />
+			}
 			{/* <MainButton label={"Opciones Visuales"} onPress={() => navigation.navigate('OptionsMenu')} /> */}
 			<ButtonCloseApp />			
 		</MainContainer>

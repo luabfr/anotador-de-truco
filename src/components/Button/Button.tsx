@@ -1,7 +1,7 @@
 import React , { FC } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addPointsToTeam, removePointsToTeam } from '../../store/actions';
-import { TheButton, ButtonLabel } from './Button.styled';
+import { TheButton, ButtonLabel, ButtonAddPoints, ButtonRemovePoints } from './Button.styled';
 
 
 interface ButtonProps {
@@ -12,12 +12,10 @@ interface ButtonProps {
 }
 
 
-const Button: FC<ButtonProps> = ({ teamId, title, addPoints, removePoints }) => {
+const Button: FC<ButtonProps> = ({ teamId, title, addPoints, removePoints  }) => {
 	const dispatch = useDispatch();
 	const teamPoints = useSelector((state) => state.teamsReducer.teams[teamId].points);
 	const matchPoints = useSelector((state) => state.teamsReducer.matchConfiguration.roundPoints);
-
-
 
 
 
@@ -31,7 +29,16 @@ const Button: FC<ButtonProps> = ({ teamId, title, addPoints, removePoints }) => 
 
 	return (
 		<TheButton onPress={handlePress}>
-			<ButtonLabel>{title}</ButtonLabel>
+			{addPoints && 
+				<ButtonAddPoints/>
+			}
+			{removePoints &&
+				<ButtonRemovePoints />
+			}
+			{(!addPoints && !removePoints) &&
+				<ButtonLabel>{title}</ButtonLabel>
+			}
+			
 		</TheButton>
 	);
 };

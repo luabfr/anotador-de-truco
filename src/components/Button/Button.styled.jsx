@@ -1,13 +1,13 @@
 import { TouchableOpacity, Text } from 'react-native';
 import styled from 'styled-components/native';
-import React,{ FC } from 'react'
+import React from 'react'
 import { Dimensions } from 'react-native';
 
 
 const windowDimensions = Dimensions.get('window'); // Obtén las dimensiones de la pantalla
 const screenHeight = windowDimensions.height; // Altura total de la pantalla
-console.log('screenHeight',screenHeight)
-console.log('6 %',screenHeight * 0.06)
+// console.log('screenHeight',screenHeight)
+// console.log('6 %',screenHeight * 0.06)
 
 
 export const ButtonLabel = styled.Text`
@@ -19,18 +19,56 @@ export const ButtonLabel = styled.Text`
   line-height: 60px;
   font-weight: bold;
   text-align: center;
-
 `;
 
 export const TheButton = styled.TouchableOpacity`
   background-color: #434343;
-  width: 60px;
-  height: 60px;
-  /* padding: 10px 10px; */
+  height: ${Math.round(screenHeight * 0.06)}px;
+  width: ${Math.round(screenHeight * 0.06)}px;
   border-radius: 5px;
-
+  justify-content: center;
+  align-items: center
 `;
 
+export const ButtonAddPoints = ()=>{
+  return(
+    <ButtonAddPointsWrapper>
+      <ButtonAddPointsX />
+      <ButtonAddPointsY />
+    </ButtonAddPointsWrapper>
+  )
+}
+
+const ButtonAddPointsWrapper = styled.View`
+  height: 100%;
+  width: 100%;
+  position: relative;
+`;
+
+
+const ButtonAddPointsX = styled.View`
+  height: ${Math.round(screenHeight * 0.03)}px;
+  width: ${Math.round(screenHeight * 0.008)}px;
+  background: white;
+  position: absolute;
+  top: 25%;
+  left: ${Math.round(screenHeight * 0.026)}px;
+`;
+
+const ButtonAddPointsY = styled.View`
+  height: ${Math.round(screenHeight * 0.008)}px;
+  width: ${Math.round(screenHeight * 0.03)}px;
+  background: white;
+  position: absolute;
+  top: ${Math.round(screenHeight * 0.026)}px;
+  left: 25%;
+`;
+
+export const ButtonRemovePoints  = styled.TouchableOpacity`
+  height: ${Math.round(screenHeight * 0.008)}px;
+  width: ${Math.round(screenHeight * 0.03)}px;
+  background: white;
+`;
 
 export const MainButtonStyled = styled.TouchableOpacity`
   

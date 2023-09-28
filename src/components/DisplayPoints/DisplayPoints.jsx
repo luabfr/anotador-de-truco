@@ -1,15 +1,7 @@
 import React  from 'react';
-import { Text , View} from 'react-native';
+import { View} from 'react-native';
 import { useSelector } from 'react-redux';
-import styled from 'styled-components/native';
-
-export const TextPoints = styled.Text`
-  font-size: 24px;
-	font-weight: 300;	
-	/* font-family: 'Poppins-Light';*/
-	color: #A6A6A6;
-	text-align: center;
-`;
+import { TextPoints } from './DisplayPoints.styled';
 
 
 const DisplayPoints = ({team}) => {

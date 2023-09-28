@@ -1,11 +1,13 @@
-import { Text,View } from 'react-native';
+// import { View } from 'react-native';
 import styled from 'styled-components/native';
 
 
 export const PlayerBoardContainer = styled.View`
   display: flex;
 	flex: 1;
+	position: relative;
 	background: #1D1E0F;
+
 `;
 
 export const ButtonsContainer = styled.View`
