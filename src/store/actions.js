@@ -15,6 +15,10 @@ export const removePointsToTeam = (teamId, points) => ({
   payload: { teamId, points }
 });
 
+export const resetPoints = ( ) => ({
+  type: 'RESET_POINTS'
+});
+
 export const setColorsPreset = ( selectedPreset ) => ({
   type: 'SET_COLORS_PRESET',
   payload: { selectedPreset }

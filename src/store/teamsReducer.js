@@ -52,6 +52,17 @@ export default function teamsReducer(state = initialState, action) {
           return team;
         })
       };
+
+    case 'RESET_POINTS':
+      // Crea un nuevo estado manteniendo inalteradas las otras propiedades
+      return {
+        ...state,
+        teams: state.teams.map(team => ({
+          ...team,
+          points: 0
+        }))
+      };
+
     case 'ADD_OBJECTIVE_TO_TEAM':
       return {
         ...state,

@@ -40,6 +40,7 @@ export const StickGroup = styled.View`
 export const StickTop = styled.View`
 	display: flex;
 	position: relative;
+	top: -1px;
 	width: 100%;
 	height: 6px;		
 	z-index: 10;
@@ -51,7 +52,7 @@ export const StickRight = styled.View`
 	width: 6px;
 	height: 100%;		
 	position: absolute;
-	right: 0;
+	right: -1px;
 	z-index: 9;
 	
 
@@ -63,7 +64,7 @@ export const StickBottom = styled.View`
 	width: 100%;
 	height: 6px;		
 	position: absolute;
-	bottom: 0;
+	bottom: -1px;
 	z-index: 8;
 	
 
@@ -75,23 +76,21 @@ export const StickLeft = styled.View`
 	width: 6px;
 	height: 100%;		
 	position: absolute;
-	left: 0;
+	left: -1px;
 	z-index: 7;
-	
-
 	background-color: ${props => (props.on ? '#FFC700' : '#0000')};
 `;
 
 export const StickDiagonal = styled.View`
 	display: flex;
-	width: 6px;
+	width: 5px;
 	height: 125%;	
 	position: absolute;
 
 	translate: -50%;
 	transform: rotate(-45deg);
-	top: -5px;
-	left: 50%;
+	top: -3px;
+	left: 49%;
 	z-index: 6;
 
 	background-color: ${props => (props.on ? '#FFC700' : '#0000')};
