@@ -1,17 +1,12 @@
 # To do
-> Terminar MVP:
- > Cuando se llega a 30 
- 	- tiene que aparece un MODAL que diga WIN. 
-		- El MODAL debe tener un boton de "Ver tablero". 
-				(muestra el tablero con los puntos actuales, y permite al user borrar o agregar puntos, en caso de que hayan puesto "30 puntos" sin querer) .
-		- El MODAL debe tener un boton de "Nueva partida". 
-				(reinicia los puntos de ambos equipos para comenzar una nueva partida)
-
 
 > Subirlo a la Play Store
  - Investigar: como agregar publicidad
 
-x Nueva partida, 
+> Agregar ICONO de la App (actualmente se ve la de EXPO)
+> Agregar Splash Screen (actualmente se ve la de EXPO)
+
+
 > Opciones visuales, 
 	> Sistema de manejo COLORES dinamicos.
 		> Colores por equipo.
@@ -25,13 +20,10 @@ x Nueva partida,
 > Animación al GANAR (confetti / modal de "jugar otra partida")
 > Agregar mi alias de MERCADO.PAGO > "Pay me a beer"
 
------
-- armar sistema de color
 
+# =========================
+Para compilar un .APK con EXPO:
+ > eas build -p android --profile preview
 
-
-// esta linea de texto es solo para commitear al nuevo branch. luego borrar
-	
-
-
-	
+Para compilar un .AAB (bundle para subir a la PlayStore) con EXPO:
+ > eas build --platform android

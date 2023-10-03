@@ -12,8 +12,8 @@ const PlayerBoard = ({team}) => {
 			<TeamName team={team} />
 			<DisplayMatchsticks team={team} />
 			<ButtonsContainer>
-				<Button teamId={team} p0 removePoints />
-				<Button teamId={team} p0 addPoints />
+				<Button teamId={team} accessibilityLabel="Sumar puntos"  p0 removePoints />
+				<Button teamId={team} accessibilityLabel="Restar puntos"  p0 addPoints />
 			</ButtonsContainer>
 			
 		</PlayerBoardContainer>

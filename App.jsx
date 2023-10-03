@@ -33,7 +33,12 @@ export default function App() {
               name="MainMenu" 
               component={ScreenMatch} 
               options={{
-                title: "Ver Menu"                
+                title: "Ver Menu"
+                /*headerLeft: () => (
+                  <View style={{ marginLeft: 10 }}>
+                    <Icon name="arrow-left" size={48} color="#000" />
+                  </View>
+                )*/
               }} />
           </RootStack.Group>
           <RootStack.Group 

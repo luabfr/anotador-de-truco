@@ -37,7 +37,7 @@ const MatchBoard = () => {
 						</ModalButtons>
 
 						<ModalButtons onPress={handleResetButton}>
-							<ButtonLabel>{"Resetear puntos"}</ButtonLabel>
+							<ButtonLabel>{"Nueva partida"}</ButtonLabel>
 						</ModalButtons>
 					</ButtonsGroup>
 				</ModalWinner>
