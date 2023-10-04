@@ -2,8 +2,11 @@
 
 > Subirlo a la Play Store
 
-> Unificar colores en: pantallas, componentes, iconos, logos, y splash screen.
+> Unificar colores en: 
+	x pantallas, componentes
+	> iconos, logos, y splash screen.
 
+> Agregar Sistema de Colores a REDUX: 
 
 
 > Opciones visuales, 

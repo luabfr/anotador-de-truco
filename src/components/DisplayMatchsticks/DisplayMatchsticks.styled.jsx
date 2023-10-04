@@ -44,14 +44,14 @@ export const StickTop = styled.View`
 	position: relative;
 	top: -1px;
 	width: 100%;
-	height: 6px;		
+	height: 4px;		
 	z-index: 10;
 	background-color: ${props => (props.on ? `${colorTheme.mode[0].sticksTeamColor[props.team]}` : '#0000')};
 `;
 
 export const StickRight = styled.View`
 	display: flex;
-	width: 6px;
+	width: 4px;
 	height: 100%;		
 	position: absolute;
 	right: -1px;
@@ -64,7 +64,7 @@ export const StickRight = styled.View`
 export const StickBottom = styled.View`
 	display: flex;
 	width: 100%;
-	height: 6px;		
+	height: 4px;		
 	position: absolute;
 	bottom: -1px;
 	z-index: 8;
@@ -75,7 +75,7 @@ export const StickBottom = styled.View`
 
 export const StickLeft = styled.View`
 	display: flex;
-	width: 6px;
+	width: 4px;
 	height: 100%;		
 	position: absolute;
 	left: -1px;
@@ -85,13 +85,13 @@ export const StickLeft = styled.View`
 
 export const StickDiagonal = styled.View`
 	display: flex;
-	width: 5px;
+	width: 3px;
 	height: 125%;	
 	position: absolute;
 
 	translate: -50%;
 	transform: rotate(-45deg);
-	top: -3px;
+	top: -5px;
 	left: 49%;
 	z-index: 6;
 
