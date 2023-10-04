@@ -1,6 +1,8 @@
 import { Text,View } from 'react-native';
 import styled , {css} from 'styled-components/native';
 import { Dimensions } from 'react-native';
+import { colorTheme } from '../colorTheme';
+
 
 // Obtén las dimensiones de la pantalla
 const windowDimensions = Dimensions.get('window');
@@ -20,8 +22,8 @@ export const DisplayMatchsticksContainer = styled.View`
 	margin-right: 40px;
 	
 	${props => props.borderBottom && css`
-		borderBottomWidth: 1px;
-		borderBottomColor: grey; 
+		borderBottomWidth: 4px;
+		borderBottomColor: ${colorTheme.mode[0].grayButtons}; 
 	`};
 	
 `;
@@ -44,7 +46,7 @@ export const StickTop = styled.View`
 	width: 100%;
 	height: 6px;		
 	z-index: 10;
-	background-color: ${props => (props.on ? '#FFC700' : '#0000')};
+	background-color: ${props => (props.on ? `${colorTheme.mode[0].sticksTeamColor[props.team]}` : '#0000')};
 `;
 
 export const StickRight = styled.View`
@@ -56,7 +58,7 @@ export const StickRight = styled.View`
 	z-index: 9;
 	
 
-	background-color: ${props => (props.on ? '#FFC700' : '#0000')};
+	background-color: ${props => (props.on ? `${colorTheme.mode[0].sticksTeamColor[props.team]}` : '#0000')};
 `;
 
 export const StickBottom = styled.View`
@@ -68,7 +70,7 @@ export const StickBottom = styled.View`
 	z-index: 8;
 	
 
-	background-color: ${props => (props.on ? '#FFC700' : '#0000')};
+	background-color: ${props => (props.on ? `${colorTheme.mode[0].sticksTeamColor[props.team]}` : '#0000')};
 `;
 
 export const StickLeft = styled.View`
@@ -78,7 +80,7 @@ export const StickLeft = styled.View`
 	position: absolute;
 	left: -1px;
 	z-index: 7;
-	background-color: ${props => (props.on ? '#FFC700' : '#0000')};
+	background-color: ${props => (props.on ? `${colorTheme.mode[0].sticksTeamColor[props.team]}` : '#0000')};
 `;
 
 export const StickDiagonal = styled.View`
@@ -93,5 +95,5 @@ export const StickDiagonal = styled.View`
 	left: 49%;
 	z-index: 6;
 
-	background-color: ${props => (props.on ? '#FFC700' : '#0000')};
+	background-color: ${props => (props.on ? `${colorTheme.mode[0].sticksTeamColor[props.team]}` : '#0000')};
 `;

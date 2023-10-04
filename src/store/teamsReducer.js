@@ -2,7 +2,7 @@ const initialState = {
   teams: [
     {
       id: 0,
-      name: 'Nosotros',
+      name: 'Nos',
       points: 0,
       objectives: []
     },
@@ -17,6 +17,9 @@ const initialState = {
     rounds: 2,
     roundPoints: 30,
     colorsPreset: 0
+  },
+  systemConfiguration:{
+    colorTheme: 0
   }
 };
 

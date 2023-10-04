@@ -31,6 +31,7 @@ const MatchBoard = () => {
 
 			{weHaveAWinner &&
 				<ModalWinner>
+
 					<ButtonsGroup>
 						<ModalButtons onPress={handleSeeBoardButton}>
 							<ButtonLabel>{"Volver al tablero"}</ButtonLabel>

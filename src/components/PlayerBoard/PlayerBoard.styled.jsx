@@ -1,12 +1,12 @@
 // import { View } from 'react-native';
 import styled from 'styled-components/native';
-
+import { colorTheme } from '../colorTheme';
 
 export const PlayerBoardContainer = styled.View`
   display: flex;
 	flex: 1;
 	position: relative;
-	background: #1D1E0F;
+	background: ${colorTheme.mode[0].bg};
 
 `;
 

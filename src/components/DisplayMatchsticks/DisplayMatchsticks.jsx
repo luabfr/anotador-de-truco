@@ -21,27 +21,27 @@ const DisplayMatchsticks = ({ team }) => {
 		<>
 			<DisplayMatchsticksContainer borderBottom>
 				<StickGroup>
-					<StickTop on={teamPoints > 0}/>
-					<StickRight on={teamPoints > 1} />
-					<StickBottom on={teamPoints > 2} />
-					<StickLeft on={teamPoints > 3} />
-					<StickDiagonal on={teamPoints > 4} />
+					<StickTop team={team} on={teamPoints > 0}/>
+					<StickRight team={team} on={teamPoints > 1} />
+					<StickBottom team={team} on={teamPoints > 2} />
+					<StickLeft team={team} on={teamPoints > 3} />
+					<StickDiagonal team={team} on={teamPoints > 4} />
 				</StickGroup>
 
 				<StickGroup>
-					<StickTop on={teamPoints > 5} />
-					<StickRight on={teamPoints > 6} />
-					<StickBottom on={teamPoints > 7} />
-					<StickLeft on={teamPoints > 8} />
-					<StickDiagonal on={teamPoints > 9} />
+					<StickTop team={team} on={teamPoints > 5} />
+					<StickRight team={team} on={teamPoints > 6} />
+					<StickBottom team={team} on={teamPoints > 7} />
+					<StickLeft team={team} on={teamPoints > 8} />
+					<StickDiagonal team={team} on={teamPoints > 9} />
 				</StickGroup>
 
 				<StickGroup>
-					<StickTop on={teamPoints > 10} />
-					<StickRight on={teamPoints > 11} />
-					<StickBottom on={teamPoints > 12} />
-					<StickLeft on={teamPoints > 13} />
-					<StickDiagonal on={teamPoints > 14} />
+					<StickTop team={team} on={teamPoints > 10} />
+					<StickRight team={team} on={teamPoints > 11} />
+					<StickBottom team={team} on={teamPoints > 12} />
+					<StickLeft team={team} on={teamPoints > 13} />
+					<StickDiagonal team={team} on={teamPoints > 14} />
 				</StickGroup>
 			</DisplayMatchsticksContainer>
 
@@ -49,27 +49,27 @@ const DisplayMatchsticks = ({ team }) => {
 
 			<DisplayMatchsticksContainer>
 				<StickGroup>
-					<StickTop on={teamPoints > basePoints + 0} />
-					<StickRight on={teamPoints > basePoints + 1} />
-					<StickBottom on={teamPoints > basePoints + 2} />
-					<StickLeft on={teamPoints > basePoints + 3} />
-					<StickDiagonal on={teamPoints > basePoints + 4} />
+					<StickTop team={team} on={teamPoints > basePoints + 0} />
+					<StickRight team={team} on={teamPoints > basePoints + 1} />
+					<StickBottom team={team} on={teamPoints > basePoints + 2} />
+					<StickLeft team={team} on={teamPoints > basePoints + 3} />
+					<StickDiagonal team={team} on={teamPoints > basePoints + 4} />
 				</StickGroup>
 
 				<StickGroup>
-					<StickTop on={teamPoints > basePoints + 5} />
-					<StickRight on={teamPoints > basePoints + 6} />
-					<StickBottom on={teamPoints > basePoints + 7} />
-					<StickLeft on={teamPoints > basePoints + 8} />
-					<StickDiagonal on={teamPoints > basePoints + 9} />
+					<StickTop team={team} on={teamPoints > basePoints + 5} />
+					<StickRight team={team} on={teamPoints > basePoints + 6} />
+					<StickBottom team={team} on={teamPoints > basePoints + 7} />
+					<StickLeft team={team} on={teamPoints > basePoints + 8} />
+					<StickDiagonal team={team} on={teamPoints > basePoints + 9} />
 				</StickGroup>
 
 				<StickGroup>
-					<StickTop on={teamPoints > basePoints + 10} />
-					<StickRight on={teamPoints > basePoints + 11} />
-					<StickBottom on={teamPoints > basePoints + 12} />
-					<StickLeft on={teamPoints > basePoints + 13} />
-					<StickDiagonal on={teamPoints > basePoints + 14} />
+					<StickTop team={team} on={teamPoints > basePoints + 10} />
+					<StickRight team={team} on={teamPoints > basePoints + 11} />
+					<StickBottom team={team} on={teamPoints > basePoints + 12} />
+					<StickLeft team={team} on={teamPoints > basePoints + 13} />
+					<StickDiagonal team={team} on={teamPoints > basePoints + 14} />
 				</StickGroup>
 			</DisplayMatchsticksContainer>
 

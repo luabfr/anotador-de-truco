@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import ScreenMatch from './src/components/ScreenMatch/ScreenMatch';
 import ScreenHome from './src/components/ScreenHome/ScreenHome';
 import ScreenOptions from './src/components/ScreenOptions/ScreenOptions';
+import { colorTheme } from './src/components/colorTheme';
+
 
 const RootStack = createStackNavigator();
 
@@ -24,32 +26,30 @@ export default function App() {
           <RootStack.Group 
             screenOptions={{
               presentation: 'modal',
-              headerStyle: { backgroundColor: 'rgb(29, 30, 15)' },
-              headerTintColor: '#abc',
-              headerTitleStyle: { fontWeight: 'bold' } ,
+              headerStyle: { backgroundColor: `${colorTheme.mode[0].bg}` },
+              headerTintColor: `${colorTheme.mode[0].text2}`,
+              headerTitleStyle: { fontWeight: 'normal' } ,
               headerShadowVisible: false, 
             }}>
             <RootStack.Screen 
               name="MainMenu" 
               component={ScreenMatch} 
               options={{
-                title: "Ver Menu"
-                /*headerLeft: () => (
-                  <View style={{ marginLeft: 10 }}>
-                    <Icon name="arrow-left" size={48} color="#000" />
-                  </View>
-                )*/
+                title: "Ver Menu"                
               }} />
           </RootStack.Group>
           <RootStack.Group 
             screenOptions={{ 
               presentation: 'modal',
-              headerStyle: { backgroundColor: 'rgb(29, 30, 15)' },
-              headerTintColor: '#abc',
+              headerStyle: { backgroundColor: `${colorTheme.mode[0].bg}` },
+              headerTintColor: `${colorTheme.mode[0].text2}`,
               headerTitleStyle: { fontWeight: 'bold' },
               headerShadowVisible: false, 
           }}>
-            <RootStack.Screen name="OptionsMenu" component={ScreenOptions} options={{ title: "Volver" }} />
+            <RootStack.Screen 
+              name="OptionsMenu" 
+              component={ScreenOptions} 
+              options={{ title: "Volver" }} />
           </RootStack.Group>
         </RootStack.Navigator>
       </NavigationContainer>
