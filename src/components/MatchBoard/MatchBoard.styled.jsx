@@ -17,11 +17,13 @@ export const ModalWinner = styled.View`
 	display: flex;
 	height: 100% ;
 	width: 100%;
-	background: ${colorTheme.mode[0].bg};
+	background: ${ props => `${colorTheme.mode[props.colorModeSelected].bg}` };
 `
 
+
 export const ModalButtons = styled.TouchableOpacity`
-  background: ${colorTheme.mode[0].grayButtons};
+
+	background: ${ props => `${colorTheme.mode[ props.colorModeSelected ].grayButtons}` };
 	width: 90%;
 	margin-bottom: 5%;
   padding: 10px 10px;
@@ -33,7 +35,7 @@ export const ButtonLabel = styled.Text`
   display: flex; 
   justify-content: center;
   align-items: center;
-  color: ${colorTheme.mode[0].text1};
+  color: ${ props => `${colorTheme.mode[props.colorModeSelected].text1}` };
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -46,6 +48,6 @@ export const ButtonsGroup = styled.View`
 	height: 120%;
 	width: 100%;
 	top: -20%;
-	background: ${colorTheme.mode[0].bg};
+	background: ${ props => `${colorTheme.mode[props.colorModeSelected].bg}` };
 	z-index: 100;
 `;

@@ -29,22 +29,3 @@ export const MainApp = styled.View`
 	justify-content: center;
 	font-size: 20px;
 `;
-
-
-
-export const colorSystem = 
-	[{
-		background: "black",
-		stick: "beige",
-		teamName: "white",
-		teamPoints: "grey",
-		menuTitle: "grey",
-		menuBG: "black"
-	} , {
-		background: "beige",
-		stick: "orangered",
-		teamName: "black",
-		teamPoints: "tomato",
-		menuTitle: "grey",
-		menuBG: "beige"
-	}]

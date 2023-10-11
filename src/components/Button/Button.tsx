@@ -16,6 +16,7 @@ const Button: FC<ButtonProps> = ({ teamId, title, addPoints, removePoints  }) =>
 	const dispatch = useDispatch();
 	const teamPoints = useSelector((state) => state.teamsReducer.teams[teamId].points);
 	const matchPoints = useSelector((state) => state.teamsReducer.matchConfiguration.roundPoints);
+	const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
 
 
 
@@ -28,15 +29,15 @@ const Button: FC<ButtonProps> = ({ teamId, title, addPoints, removePoints  }) =>
 	};
 
 	return (
-		<TheButton onPress={handlePress}>
+		<TheButton onPress={handlePress} colorModeSelected={colorModeSelected}>
 			{addPoints && 
-				<ButtonAddPoints/>
+				<ButtonAddPoints colorModeSelected={colorModeSelected} />
 			}
 			{removePoints &&
-				<ButtonRemovePoints />
+				<ButtonRemovePoints colorModeSelected={colorModeSelected} />
 			}
 			{(!addPoints && !removePoints) &&
-				<ButtonLabel>{title}</ButtonLabel>
+				<ButtonLabel colorModeSelected={colorModeSelected}>{title}</ButtonLabel>
 			}
 			
 		</TheButton>

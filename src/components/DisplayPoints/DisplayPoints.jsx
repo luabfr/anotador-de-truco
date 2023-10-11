@@ -4,14 +4,22 @@ import { useSelector } from 'react-redux';
 import { TextPoints } from './DisplayPoints.styled';
 
 
-const DisplayPoints = ({team}) => {
+const DisplayPoints = ({ team }) => {
+
 	const teamPoints = useSelector((state) => state.teamsReducer.teams[team].points)
 	const labelGoodOrBad = teamPoints > 15 ? "Buenas" : "Malas";
 	const labelGoodOrBadBool = teamPoints > 15 ? true : false;
-	console.log('labelGoodOrBadBool', labelGoodOrBadBool)
+	const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
+
+
 	return (
 		<View>
-			<TextPoints labelGoodOrBadBool={labelGoodOrBadBool} team={team}>{teamPoints} {labelGoodOrBad} </TextPoints>
+			<TextPoints 
+				labelGoodOrBadBool={labelGoodOrBadBool} 
+				colorModeSelected={colorModeSelected}
+				team={team}>
+				{teamPoints} {labelGoodOrBad} 
+			</TextPoints>
 		</View>
 	);
 };

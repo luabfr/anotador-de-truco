@@ -4,8 +4,7 @@ import { colorTheme } from '../colorTheme';
 
 export const TeamNameContainer = styled.View`
   display: flex;
-	justify-content: center;
-	
+	justify-content: center;	
 	padding-left: 20%;	
 `;
 
@@ -13,7 +12,7 @@ export const TNTitle = styled.Text`
 	font-size: 38px;
 	font-weight: bold;
 	/* fontFamily: 'Poppins-Bold';*/
-	color: ${colorTheme.mode[0].text1};
+	color: ${ props => `${colorTheme.mode[props.colorModeSelected].text1}` };
   display: flex;
 	justify-content: left;
 	text-align: center;

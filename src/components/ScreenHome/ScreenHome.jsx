@@ -10,25 +10,25 @@ import { resetPoints } from '../../store/actions';
 const HomeScreen = ({ navigation }) => {
 	const teamAPoints = useSelector((state) => state.teamsReducer.teams[0].points)
 	const teamBPoints = useSelector((state) => state.teamsReducer.teams[1].points)
+	const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
 
 	const matchStarted = ((teamAPoints != 0) || (teamBPoints != 0)) ? true : false;
 
 	const dispatch = useDispatch();
 	const handleNewMatch = () => {
 		dispatch(resetPoints());
-		navigation.navigate('MainMenu')
+		navigation.navigate('ScreenMatch')
 	};
 
 
 	return (
-		<MainContainer >
+		<MainContainer colorModeSelected={colorModeSelected}>
 			<LogoMain /> 
-			<MainButton label="Nueva partida" onPress={() => handleNewMatch() } />
-
-			{ matchStarted &&
-				<MainButton label="Volver a la partida" onPress={() => navigation.navigate('MainMenu')} />
+			{matchStarted &&
+				<MainButton label="Volver a la partida" alignLeft onPress={() => navigation.navigate('ScreenMatch')} />
 			}
-			{/* <MainButton label={"Opciones Visuales"} onPress={() => navigation.navigate('OptionsMenu')} /> */}
+			<MainButton label="Nueva partida" alignLeft onPress={() => handleNewMatch() } />
+			{/* <MainButton label={"Opciones Visuales"} alignLeft onPress={() => navigation.navigate('ScreenOptions')}/> */}
 			<ButtonCloseApp />			
 		</MainContainer>
 	);

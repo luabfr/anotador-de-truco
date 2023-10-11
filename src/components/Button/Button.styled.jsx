@@ -1,20 +1,21 @@
 import { TouchableOpacity, Text } from 'react-native';
-import styled from 'styled-components/native';
+import styled , {css} from 'styled-components/native';
 import React from 'react'
 import { Dimensions } from 'react-native';
 import { colorTheme } from '../colorTheme';
+import { useSelector } from 'react-redux';
+
+
 
 const windowDimensions = Dimensions.get('window'); // Obtén las dimensiones de la pantalla
 const screenHeight = windowDimensions.height; // Altura total de la pantalla
-// console.log('screenHeight',screenHeight)
-// console.log('6 %',screenHeight * 0.06)
 
 
 export const ButtonLabel = styled.Text`
   display: flex; 
   justify-content: center;
   align-items: center;
-  color: ${colorTheme.mode[0].text1};
+  color:  ${ props => `${colorTheme.mode[props.colorModeSelected].text1}` };
   font-size: 48px;
   line-height: 60px;
   font-weight: bold;
@@ -22,7 +23,7 @@ export const ButtonLabel = styled.Text`
 `;
 
 export const TheButton = styled.TouchableOpacity`
-  background-color: ${colorTheme.mode[0].grayButtons};
+  background: ${ props => `${colorTheme.mode[props.colorModeSelected].grayButtons}` };
   height: ${Math.round(screenHeight * 0.06)}px;
   width: ${Math.round(screenHeight * 0.06)}px;
   border-radius: 5px;
@@ -31,10 +32,13 @@ export const TheButton = styled.TouchableOpacity`
 `;
 
 export const ButtonAddPoints = ()=>{
+
+  const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
+  
   return(
     <ButtonAddPointsWrapper>
-      <ButtonAddPointsX />
-      <ButtonAddPointsY />
+      <ButtonAddPointsX colorModeSelected={colorModeSelected}/>
+      <ButtonAddPointsY colorModeSelected={colorModeSelected} />
     </ButtonAddPointsWrapper>
   )
 }
@@ -49,7 +53,7 @@ const ButtonAddPointsWrapper = styled.View`
 const ButtonAddPointsX = styled.View`
   height: ${Math.round(screenHeight * 0.03)}px;
   width: ${Math.round(screenHeight * 0.008)}px;
-  background: ${colorTheme.mode[0].text1};
+  background: ${props => (`${colorTheme.mode[props.colorModeSelected].text1}`)};
   position: absolute;
   top: 25%;
   left: ${Math.round(screenHeight * 0.026)}px;
@@ -58,7 +62,7 @@ const ButtonAddPointsX = styled.View`
 const ButtonAddPointsY = styled.View`
   height: ${Math.round(screenHeight * 0.008)}px;
   width: ${Math.round(screenHeight * 0.03)}px;
-  background: ${colorTheme.mode[0].text1};
+  background: ${props => (`${colorTheme.mode[props.colorModeSelected].text1}`)};
   position: absolute;
   top: ${Math.round(screenHeight * 0.026)}px;
   left: 25%;
@@ -67,15 +71,21 @@ const ButtonAddPointsY = styled.View`
 export const ButtonRemovePoints  = styled.TouchableOpacity`
   height: ${Math.round(screenHeight * 0.008)}px;
   width: ${Math.round(screenHeight * 0.03)}px;
-  background: ${colorTheme.mode[0].text1};
+  background: ${ props => `${colorTheme.mode[props.colorModeSelected].text1}` };
 `;
 
-export const MainButtonStyled = styled.TouchableOpacity`
-  
+
+export const MainButtonStyled = styled.TouchableOpacity`  
   display: flex;
 	justify-content: center;
-  background: ${colorTheme.mode[0].bg};
   height: 48px;
+
+	${props => 
+    (props.mt100 && "margin-top:100px;")
+  };
+  ${props =>
+    (props.alignLeft && css`padding-left: 40px;   align-items: flex-start;`)
+  };
 
 `;
 
@@ -84,13 +94,16 @@ export const MainButtonText = styled.Text`
   font-size: 32px;
 	font-weight: bold;
 	/* font-family: 'Poppins-Bold';*/
-	color: ${colorTheme.mode[0].text1};
+	color: ${props => (`${colorTheme.mode[props.colorModeSelected].text1}`)};
 `;
 
-export const MainButton = ({ label,onPress } ) =>{
+export const MainButton = ({ label,onPress,mt100,alignLeft } ) =>{
+
+  const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
+
   return (
-    <MainButtonStyled onPress={onPress} >
-      <MainButtonText>
+    <MainButtonStyled onPress={onPress} mt100={mt100} alignLeft={alignLeft}>
+      <MainButtonText colorModeSelected={colorModeSelected}>
         {label}
       </MainButtonText>
     </MainButtonStyled>
