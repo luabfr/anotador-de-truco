@@ -24,3 +24,4 @@ export const setColorsPreset = ( selectedPreset ) => ({
   payload: { selectedPreset }
 });
 
+

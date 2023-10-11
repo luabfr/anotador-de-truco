@@ -17,9 +17,6 @@ const initialState = {
     rounds: 2,
     roundPoints: 30,
     colorsPreset: 0
-  },
-  systemConfiguration:{
-    colorTheme: 0
   }
 };
 

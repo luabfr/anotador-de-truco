@@ -3,12 +3,13 @@ import Button from '../Button/Button';
 import { PlayerBoardContainer,ButtonsContainer } from './PlayerBoard.styled';
 import TeamName from '../TeamName/TeamName';
 import DisplayMatchsticks from '../DisplayMatchsticks/DisplayMatchsticks';
+import { useSelector } from 'react-redux';
 
-
-const PlayerBoard = ({team}) => {
+const PlayerBoard = ({ team }) => {
+	const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
 	
 	return (
-		<PlayerBoardContainer>
+		<PlayerBoardContainer colorModeSelected={colorModeSelected}>
 			<TeamName team={team} />
 			<DisplayMatchsticks team={team} />
 			<ButtonsContainer>

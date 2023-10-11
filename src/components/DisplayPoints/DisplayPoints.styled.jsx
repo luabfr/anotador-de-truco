@@ -7,6 +7,6 @@ export const TextPoints = styled.Text`
 	font-weight: 300;	
 	/* font-family: 'Poppins-Light';*/
 
-	color: ${props => (props.labelGoodOrBadBool ? `${colorTheme.mode[0].sticksTeamColor[props.team]}` : `${colorTheme.mode[0].text2}`)} ;	 
+	color: ${props => (props.labelGoodOrBadBool ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : `${colorTheme.mode[props.colorModeSelected].text2}`)} ;	 
 	text-align: left;
 `;

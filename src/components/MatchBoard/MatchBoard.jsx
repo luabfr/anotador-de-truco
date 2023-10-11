@@ -8,13 +8,12 @@ import { removePointsToTeam } from '../../store/actions';
 const MatchBoard = () => {
 	const teamAPoints = useSelector((state) => state.teamsReducer.teams[0].points)
 	const teamBPoints = useSelector((state) => state.teamsReducer.teams[1].points)
-
+	const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
+	
 	let weHaveAWinner = ((teamAPoints == 30) || (teamBPoints == 30)) ? true : false;
-	// console.log('weHaveAWinner', weHaveAWinner)
-
+	
 	const dispatch = useDispatch();
 	const handleSeeBoardButton = () => {
-		// al hacer click, ocultar modal.
 		let teamId = teamAPoints == 30 ? 0 : 1;
 		dispatch(removePointsToTeam(teamId,1));
 	}
@@ -26,19 +25,19 @@ const MatchBoard = () => {
 
 	return (
 		<MBContainer>
-			<PlayerBoard team={0} />
-			<PlayerBoard team={1} />
+			<PlayerBoard team={0}  />
+			<PlayerBoard team={1}  />
 
 			{weHaveAWinner &&
-				<ModalWinner>
+				<ModalWinner colorModeSelected={colorModeSelected}>
 
-					<ButtonsGroup>
-						<ModalButtons onPress={handleSeeBoardButton}>
-							<ButtonLabel>{"Volver al tablero"}</ButtonLabel>
+					<ButtonsGroup colorModeSelected={colorModeSelected}>
+						<ModalButtons onPress={handleSeeBoardButton} colorModeSelected={colorModeSelected}>
+							<ButtonLabel colorModeSelected={colorModeSelected}>{"Volver al tablero"}</ButtonLabel>
 						</ModalButtons>
 
-						<ModalButtons onPress={handleResetButton}>
-							<ButtonLabel>{"Nueva partida"}</ButtonLabel>
+						<ModalButtons onPress={handleResetButton} colorModeSelected={colorModeSelected}>
+							<ButtonLabel colorModeSelected={colorModeSelected}>{"Nueva partida"}</ButtonLabel>
 						</ModalButtons>
 					</ButtonsGroup>
 				</ModalWinner>

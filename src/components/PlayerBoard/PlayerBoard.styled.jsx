@@ -6,7 +6,7 @@ export const PlayerBoardContainer = styled.View`
   display: flex;
 	flex: 1;
 	position: relative;
-	background: ${colorTheme.mode[0].bg};
+	background: ${ props => `${colorTheme.mode[props.colorModeSelected].bg}` };
 
 `;
 
