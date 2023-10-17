@@ -5,6 +5,9 @@ Para compilar un .APK con EXPO:
 Para compilar un .AAB (bundle para subir a la PlayStore) con EXPO:
  > eas build --platform android
 
+
+
+# ---------
 # ---------
 Para aumentar el numero de la version del parche de la App (ej: v1.0.3 > v1.0.4)
  > npm version patch
