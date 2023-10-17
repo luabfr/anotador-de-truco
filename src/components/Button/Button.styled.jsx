@@ -78,7 +78,7 @@ export const ButtonRemovePoints  = styled.TouchableOpacity`
 export const MainButtonStyled = styled.TouchableOpacity`  
   display: flex;
 	justify-content: center;
-  height: 48px;
+  height: 60px;
 
 	${props => 
     (props.mt100 && "margin-top:100px;")
@@ -87,22 +87,32 @@ export const MainButtonStyled = styled.TouchableOpacity`
     (props.alignLeft && css`padding-left: 40px;   align-items: flex-start;`)
   };
 
+  ${props =>
+  (props.absoluteBottom && css`
+      position: absolute;
+      bottom: 5%;
+    `)
+  };
+
 `;
 
 export const MainButtonText = styled.Text`
   text-align: center;
-  font-size: 32px;
+  font-size: 38px;
 	font-weight: bold;
+
 	/* font-family: 'Poppins-Bold';*/
 	color: ${props => (`${colorTheme.mode[props.colorModeSelected].text1}`)};
+
+  
 `;
 
-export const MainButton = ({ label,onPress,mt100,alignLeft } ) =>{
+export const MainButton = ({ label,onPress,mt100,alignLeft , absoluteBottom} ) =>{
 
   const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
 
   return (
-    <MainButtonStyled onPress={onPress} mt100={mt100} alignLeft={alignLeft}>
+    <MainButtonStyled onPress={onPress} mt100={mt100} alignLeft={alignLeft} absoluteBottom={absoluteBottom}>
       <MainButtonText colorModeSelected={colorModeSelected}>
         {label}
       </MainButtonText>

@@ -8,7 +8,7 @@ const ButtonCloseApp =()=>{
 		BackHandler.exitApp();
 	};
 	return(
-		<MainButton label="Salir" onPress={handlePress} mt100 alignLeft />
+		<MainButton label="Salir" onPress={handlePress} alignLeft absoluteBottom/>
 	)
 }
 
