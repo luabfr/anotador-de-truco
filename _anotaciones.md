@@ -31,6 +31,11 @@ Para compilar un .AAB (bundle para subir a la PlayStore) con EXPO:
  > eas build --platform android
 
 
+# MODO DEVELOPMENT -----------------------------
+Genera APK para desarrollo.
+> eas build -p android --profile development
+Levanta el server de prueba (¿?¿?¿?) o algo asi
+> npx expo start --dev-client
 
 
 # ================================================================
@@ -39,3 +44,7 @@ Para compilar un .AAB (bundle para subir a la PlayStore) con EXPO:
 Una vez que se compila el ".aab", en PLAY CONSOLE, 
 hay que crear una "PRUEBA INTERNA" con la nueva version y subir ahi el ".aab".
 Luego, se puede "copiar el enlace" y pasarmelo por whatsapp al telefono.
+
+
+
+

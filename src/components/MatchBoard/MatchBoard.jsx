@@ -1,10 +1,9 @@
 import React from 'react';
 import PlayerBoard from '../PlayerBoard/PlayerBoard';
 import { useSelector,useDispatch } from 'react-redux';
-import { MBContainer,ModalWinner,ButtonsGroup,ModalButtons,ButtonLabel,ButtonLabelModal,WinnersText1,WinnersText2,WinnersText3,WinnersGroup,WinnersImgWrapper,WinnersImage,ModalButtonsWrapper } from './MatchBoard.styled';
+import { MBContainer,ModalWinner,ButtonsGroup,ModalButtons,ButtonLabelModal,WinnersText1,WinnersText2,WinnersText3,WinnersGroup,WinnersImgWrapper,WinnersImage,ModalButtonsWrapper } from './MatchBoard.styled';
 import { resetPoints } from '../../store/actions';
 import { removePointsToTeam } from '../../store/actions';
-// import { Text, View, Image } from 'react-native';
 
 
 const MatchBoard = () => {

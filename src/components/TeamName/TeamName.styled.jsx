@@ -14,6 +14,5 @@ export const TNTitle = styled.Text`
 	/* fontFamily: 'Poppins-Bold';*/
 	color: ${ props => `${colorTheme.mode[props.colorModeSelected].text1}` };
   display: flex;
-	justify-content: left;
-	text-align: center;
+	justify-content: flex-start;	
 `;
