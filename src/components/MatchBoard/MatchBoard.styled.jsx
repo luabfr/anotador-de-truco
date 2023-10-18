@@ -107,9 +107,5 @@ export const WinnersImage = styled.Image`
 	width: 200px;
 	height: 200px;
 
-	svg{
-		path {
-			stroke: lime !important;
-		}
-	}
+	tint-color: lime;
 `
