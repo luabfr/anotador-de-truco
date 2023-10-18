@@ -7,7 +7,7 @@ const LogoContainer = styled.View`
   align-items: center;
 	height: 200px;
 	margin: 40px;
-	margin-bottom: 10vh
+	margin-bottom: 10vh;
 `;
 
 const ImageStyled = styled.Image`

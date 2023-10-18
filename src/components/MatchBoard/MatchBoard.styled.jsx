@@ -24,7 +24,6 @@ export const ModalWinner = styled.View`
 export const ModalButtons = styled.TouchableOpacity`
 
 	width: 90%;
-	// margin-bottom: 5%;
   padding: 10px 10px;
   border-radius: 5px;
 `;
