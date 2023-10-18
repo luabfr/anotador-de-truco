@@ -12,16 +12,15 @@ const MatchBoard = () => {
 	const teamBPoints = useSelector((state) => state.teamsReducer.teams[1].points)
 	const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
 	
-	// let weHaveAWinner = true;
-	let weHaveAWinner = ((teamAPoints == 30) || (teamBPoints == 30)) ? true : false;
-	let winnerIsTeamA = ( teamAPoints == 30 ) ? true : false;
+	let weHaveAWinner = ((teamAPoints === 30) || (teamBPoints === 30)) ? true : false;
+	let winnerIsTeamA = ( teamAPoints === 30 ) ? true : false;
 	let labelForWinner1 = winnerIsTeamA ? `Ganamos` : `Ganaron` ;
 	let labelForWinner2 = winnerIsTeamA ? `${teamAPoints} a ${teamBPoints}` : `${teamBPoints} a ${teamAPoints}`;
 	let labelForWinner3 = winnerIsTeamA ? `NOSOTROS` : `ELLOS`;
 	
 	const dispatch = useDispatch();
 	const handleSeeBoardButton = () => {
-		let teamId = teamAPoints == 30 ? 0 : 1;
+		let teamId = teamAPoints === 30 ? 0 : 1;
 		dispatch(removePointsToTeam(teamId,1));
 	}
 
@@ -42,10 +41,11 @@ const MatchBoard = () => {
 						
 						<WinnersGroup>
 							<WinnersImgWrapper>
-								<WinnersImage
+								{/* <WinnersImage
 									source={require('../../../assets/icon_cup.svg')} 
-								/>
+								/> */}
 							</WinnersImgWrapper>
+							<WinnersText2> {"Elimine todos los vh"} </WinnersText2>
 							<WinnersText2> {labelForWinner1} </WinnersText2>
 							<WinnersText1> {labelForWinner3} </WinnersText1>
 							<WinnersText3> {labelForWinner2} </WinnersText3>

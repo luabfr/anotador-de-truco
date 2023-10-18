@@ -18,7 +18,7 @@ export const ModalWinner = styled.View`
 	height: 100% ;
 	width: 100%;
 	background: ${ props => `${colorTheme.mode[props.colorModeSelected].bg}` };
-`
+`;
 
 
 export const ModalButtons = styled.TouchableOpacity`
@@ -69,8 +69,7 @@ export const ModalButtonsWrapper = styled.View`
 export const WinnersGroup = styled.View`
 	width: 100%;
   height: 100%;
-  padding-top: 30vh;
-
+  padding-top: 80px;
 `;
 
 export const WinnersImgWrapper = styled.View`
@@ -83,7 +82,7 @@ export const WinnersText1 = styled.Text`
 	font-weight: bold;
 	text-align: center;
 	line-height: 48px;
-`
+`;
 
 export const WinnersText2 = styled.Text`
 	color: #BBBBBB;
@@ -92,7 +91,7 @@ export const WinnersText2 = styled.Text`
 	text-align: center;
 	line-height: 36px;
 	margin-top: 5%;
-`
+`;
 
 export const WinnersText3 = styled.Text`
 	color: white;
@@ -106,6 +105,4 @@ export const WinnersText3 = styled.Text`
 export const WinnersImage = styled.Image`
 	width: 200px;
 	height: 200px;
-
-	tint-color: lime;
-`
+`;
