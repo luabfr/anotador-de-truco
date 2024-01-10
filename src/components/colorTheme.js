@@ -5,12 +5,12 @@ export const colorTheme = {
 	mode: [
 		{
 			name: "dark mode",
-			bg: "#170B13",
+			bg: "#0B0609",
 			text1: "#F6F1E9",
 			text2: "#A6A6A6",
-			grayButtons: "#5A414E",
+			grayButtons: "#474144",
 			textHighlighted: "#FF720B",
-			sticksTeamColor: ["#FFE146", "#39DAFE" ]
+			sticksTeamColor: ["#FFE146", "#6DDCFF" ]
 
 		},	
 		{

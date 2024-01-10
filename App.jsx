@@ -7,7 +7,6 @@ import ScreenMatch from './src/components/ScreenMatch/ScreenMatch';
 import ScreenHome from './src/components/ScreenHome/ScreenHome';
 import ScreenOptions from './src/components/ScreenOptions/ScreenOptions';
 import { colorTheme } from './src/components/colorTheme';
-import { View , Text, Button} from 'react-native';
 
 const RootStack = createStackNavigator();
 
@@ -49,14 +48,14 @@ export default function App() {
                 headerShadowVisible: false,
               }}>
               <RootStack.Screen
-                name="OptionsMenu"
+                name="ScreenOptions"
                 component={ScreenOptions}
                 options={{ title: "Volver" }} />
             </RootStack.Group>
           </RootStack.Navigator>
         </NavigationContainer>
 
-      {/* </CustomView> */}
+
     </Provider>
   );
 }

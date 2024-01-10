@@ -31,7 +31,7 @@ export const TheButton = styled.TouchableOpacity`
   align-items: center
 `;
 
-export const ButtonAddPoints = ()=>{
+export const ButtonAddPoints = () =>{
 
   const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
   
@@ -78,6 +78,7 @@ export const ButtonRemovePoints  = styled.TouchableOpacity`
 export const MainButtonStyled = styled.TouchableOpacity`  
   display: flex;
 	justify-content: center;
+  align-items: center;
   height: 60px;
 
 	${props => 
@@ -86,9 +87,15 @@ export const MainButtonStyled = styled.TouchableOpacity`
   ${props =>
     (props.alignLeft && css`padding-left: 40px;   align-items: flex-start;`)
   };
+  ${props =>
+    (props.borderBottom && css`
+      border-bottom-width: 1px;
+      border-bottom-color: #333;
+    `)
+  };
 
   ${props =>
-  (props.absoluteBottom && css`
+    (props.absoluteBottom && css`
       position: absolute;
       bottom: 5%;
     `)
@@ -97,9 +104,9 @@ export const MainButtonStyled = styled.TouchableOpacity`
 `;
 
 export const MainButtonText = styled.Text`
-  text-align: center;
-  font-size: 38px;
+  font-size: 20px;
 	font-weight: bold;
+  text-transform: uppercase;
 
 	/* font-family: 'Poppins-Bold';*/
 	color: ${props => (`${colorTheme.mode[props.colorModeSelected].text1}`)};
@@ -107,12 +114,17 @@ export const MainButtonText = styled.Text`
   
 `;
 
-export const MainButton = ({ label,onPress,mt100,alignLeft , absoluteBottom} ) =>{
+export const MainButton = ({ label,onPress,mt100,alignLeft,absoluteBottom,borderBottom } ) =>{
 
   const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
 
   return (
-    <MainButtonStyled onPress={onPress} mt100={mt100} alignLeft={alignLeft} absoluteBottom={absoluteBottom}>
+    <MainButtonStyled 
+      onPress={onPress} 
+      mt100={mt100} 
+      alignLeft={alignLeft} 
+      borderBottom={borderBottom}
+      absoluteBottom={absoluteBottom}>
       <MainButtonText colorModeSelected={colorModeSelected}>
         {label}
       </MainButtonText>

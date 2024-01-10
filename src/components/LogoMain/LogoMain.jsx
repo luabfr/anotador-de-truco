@@ -1,18 +1,28 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import styled from 'styled-components/native';
+import { Dimensions } from 'react-native';
 
 const LogoContainer = styled.View`
 	justify-content: center;
   align-items: center;
 	height: 200px;
-	margin: 40px;
-	margin-bottom: 80px;
+	margin: 20px;
+
+	${Dimensions.get('window').height < 660 && `
+    height: 140px;
+  `}
 `;
 
 const ImageStyled = styled.Image`
 	width: 160px;
   height: 160px;
+
+	${Dimensions.get('window').height < 660 && `
+    width: 100px;
+  	height: 100px;
+  `}
+
 `;
 
 

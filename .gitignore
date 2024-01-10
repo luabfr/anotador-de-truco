@@ -1,3 +1,7 @@
+_anotaciones.md
+_toDo.md
+_contenido.md
+
 node_modules/
 .expo/
 dist/
@@ -76,3 +80,4 @@ web-build/
 dist/
 
 # @end expo-cli
+

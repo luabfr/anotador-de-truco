@@ -2,7 +2,7 @@ import React from 'react';
 import ButtonCloseApp from '../ButtonCloseApp/ButtonCloseApp';
 import { MainButton } from '../Button/Button.styled';
 import LogoMain from '../LogoMain/LogoMain';
-import { MainContainer } from './ScreenHome.styled';
+import { MainContainer,MainButtonsWrap,MainAllBtns,AppNameTextL,AppNameTextR,AppNameTextWrap } from './ScreenHome.styled';
 import { useSelector,useDispatch } from 'react-redux';
 import { resetPoints } from '../../store/actions';
 
@@ -24,12 +24,35 @@ const HomeScreen = ({ navigation }) => {
 	return (
 		<MainContainer colorModeSelected={colorModeSelected}>
 			<LogoMain /> 
-			{matchStarted &&
-				<MainButton label="Volver a la partida" alignLeft onPress={() => navigation.navigate('ScreenMatch')} />
-			}
-			<MainButton label="Nueva partida" alignLeft onPress={() => handleNewMatch() } />
-			{/* <MainButton label={"Opciones Visuales"} alignLeft onPress={() => navigation.navigate('ScreenOptions')}/> */}
-			<ButtonCloseApp />			
+
+			<AppNameTextWrap>
+				<AppNameTextL>
+					Anotador 
+				</AppNameTextL>
+				<AppNameTextR>
+					{' '}de Truco
+				</AppNameTextR>
+			</AppNameTextWrap>
+			
+			<MainAllBtns>
+				<MainButtonsWrap>
+					{matchStarted &&
+						<MainButton 
+							label="Volver a la partida" 
+							onPress={() => navigation.navigate('ScreenMatch')} 
+							borderBottom/>
+					}
+					<MainButton 
+						label="Nueva partida" 
+						onPress={() => handleNewMatch() } />
+
+					{/* <MainButton 
+						label={"Opciones"} 
+						onPress={() => navigation.navigate('ScreenOptions')}/> */}
+				</MainButtonsWrap>
+
+				<ButtonCloseApp />		
+			</MainAllBtns>	
 		</MainContainer>
 	);
 	

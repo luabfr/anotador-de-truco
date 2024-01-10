@@ -5,11 +5,11 @@ import TeamName from '../TeamName/TeamName';
 import DisplayMatchsticks from '../DisplayMatchsticks/DisplayMatchsticks';
 import { useSelector } from 'react-redux';
 
-const PlayerBoard = ({ team }) => {
+const PlayerBoard = ({ team,borderRight }) => {
 	const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
 	
 	return (
-		<PlayerBoardContainer colorModeSelected={colorModeSelected}>
+		<PlayerBoardContainer colorModeSelected={colorModeSelected} borderRight={borderRight}>
 			<TeamName team={team} />
 			<DisplayMatchsticks team={team} />
 			<ButtonsContainer>

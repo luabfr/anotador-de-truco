@@ -7,7 +7,8 @@ export const PlayerBoardContainer = styled.View`
 	flex: 1;
 	position: relative;
 	background: ${ props => `${colorTheme.mode[props.colorModeSelected].bg}` };
-
+	border-right-width: ${(props) => props.borderRight ? "1px": '0'}; /* color por defecto si no se proporciona la prop */
+  border-right-color: ${ props => `${colorTheme.mode[props.colorModeSelected].grayButtons}` };
 `;
 
 export const ButtonsContainer = styled.View`

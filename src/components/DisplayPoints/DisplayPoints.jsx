@@ -8,14 +8,14 @@ const DisplayPoints = ({ team }) => {
 
 	const teamPoints = useSelector((state) => state.teamsReducer.teams[team].points)
 	const labelGoodOrBad = teamPoints > 15 ? "Buenas" : "Malas";
-	const labelGoodOrBadBool = teamPoints > 15 ? true : false;
+	// const labelGoodOrBadBool = teamPoints > 15 ? true : false;
 	const colorModeSelected = useSelector((state) => state.teamsReducer.matchConfiguration.colorsPreset)
 
 
 	return (
 		<View>
 			<TextPoints 
-				labelGoodOrBadBool={labelGoodOrBadBool} 
+				labelGoodOrBadBool={true} 
 				colorModeSelected={colorModeSelected}
 				team={team}>
 				{teamPoints} {labelGoodOrBad} 

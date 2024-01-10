@@ -2,14 +2,14 @@
   "expo": {
     "name": "Anotador De Truco",
     "slug": "anotador-de-truco",
-    "version": "6.0.2",
+    "version": "7.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0B0609"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -18,10 +18,10 @@
       "supportsTablet": true
     },
     "android": {
-      "versionCode": 8,
+      "versionCode": 9,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0B0609"
       },
       "package": "com.luabfr.anotadordetruco"
     },

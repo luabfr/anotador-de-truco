@@ -9,7 +9,7 @@ export const TeamNameContainer = styled.View`
 `;
 
 export const TNTitle = styled.Text`
-	font-size: 38px;
+	font-size: 32px;
 	font-weight: bold;
 	/* fontFamily: 'Poppins-Bold';*/
 	color: ${ props => `${colorTheme.mode[props.colorModeSelected].text1}` };

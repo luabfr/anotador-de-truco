@@ -21,7 +21,7 @@ export const DisplayMatchsticksContainer = styled.View`
 	margin-right: 40px;
 	
 	${props => props.borderBottom && css`
-		borderBottomWidth: 4px;
+		borderBottomWidth: 2px;
 		borderBottomColor: ${colorTheme.mode[props.colorModeSelected].grayButtons}; 
 	`};
 	
@@ -41,19 +41,19 @@ export const StickGroup = styled.View`
 export const StickTop = styled.View`
 	display: flex;
 	position: relative;
-	top: -1px;
+	top: 0;
 	width: 100%;
-	height: 4px;		
+	height: 5px;		
 	z-index: 10;
 	background-color: ${props => (props.on ? `${colorTheme.mode[ props.colorModeSelected ].sticksTeamColor[ props.team ]}` : '#0000')};
 `;
 
 export const StickRight = styled.View`
 	display: flex;
-	width: 4px;
+	width: 5px;
 	height: 100%;		
 	position: absolute;
-	right: -1px;
+	right: 0;
 	z-index: 9;
 	background-color: ${props => (props.on ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : '#0000')};
 `;
@@ -61,33 +61,33 @@ export const StickRight = styled.View`
 export const StickBottom = styled.View`
 	display: flex;
 	width: 100%;
-	height: 4px;		
+	height: 5px;		
 	position: absolute;
-	bottom: -1px;
+	bottom: 0;
 	z-index: 8;
 	background-color: ${props => (props.on ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : '#0000')};
 `;
 
 export const StickLeft = styled.View`
 	display: flex;
-	width: 4px;
+	width: 5px;
 	height: 100%;		
 	position: absolute;
-	left: -1px;
+	left: 0;
 	z-index: 7;
 	background-color: ${props => (props.on ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : '#0000')};
 `;
 
 export const StickDiagonal = styled.View`
 	display: flex;
-	width: 3px;
+	width: 5.5px;
 	height: 125%;	
 	position: absolute;
 
 	translate: -50%;
 	transform: rotate(-45deg);
 	top: -5px;
-	left: 49%;
+	left: 50%;
 	z-index: 6;
 
 	background-color: ${props => (props.on ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : '#0000')};
