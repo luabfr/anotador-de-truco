@@ -1,6 +1,6 @@
 {
   "name": "anotadordetruco",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",
