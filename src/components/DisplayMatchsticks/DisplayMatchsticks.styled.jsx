@@ -46,6 +46,11 @@ export const StickTop = styled.View`
 	height: 5px;		
 	z-index: 10;
 	background-color: ${props => (props.on ? `${colorTheme.mode[ props.colorModeSelected ].sticksTeamColor[ props.team ]}` : '#0000')};
+
+	${props => (props.buenas && `
+		background: ${colorTheme.mode[props.colorModeSelected].sticksTeamColorDark[props.team]}
+	`)};
+	
 `;
 
 export const StickRight = styled.View`
@@ -56,6 +61,9 @@ export const StickRight = styled.View`
 	right: 0;
 	z-index: 9;
 	background-color: ${props => (props.on ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : '#0000')};
+	${props => (props.buenas && `
+		background: ${colorTheme.mode[props.colorModeSelected].sticksTeamColorDark[props.team]}
+	`)};
 `;
 
 export const StickBottom = styled.View`
@@ -66,6 +74,9 @@ export const StickBottom = styled.View`
 	bottom: 0;
 	z-index: 8;
 	background-color: ${props => (props.on ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : '#0000')};
+	${props => (props.buenas && `
+		background: ${colorTheme.mode[props.colorModeSelected].sticksTeamColorDark[props.team]}
+	`)};
 `;
 
 export const StickLeft = styled.View`
@@ -76,6 +87,9 @@ export const StickLeft = styled.View`
 	left: 0;
 	z-index: 7;
 	background-color: ${props => (props.on ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : '#0000')};
+	${props => (props.buenas && `
+		background: ${colorTheme.mode[props.colorModeSelected].sticksTeamColorDark[props.team]}
+	`)};
 `;
 
 export const StickDiagonal = styled.View`
@@ -87,8 +101,11 @@ export const StickDiagonal = styled.View`
 	translate: -50%;
 	transform: rotate(-45deg);
 	top: -5px;
-	left: 50%;
+	left: 49%;
 	z-index: 6;
 
 	background-color: ${props => (props.on ? `${colorTheme.mode[props.colorModeSelected].sticksTeamColor[props.team]}` : '#0000')};
+	${props => (props.buenas && `
+		background: ${colorTheme.mode[props.colorModeSelected].sticksTeamColorDark[props.team]}
+	`)};
 `;

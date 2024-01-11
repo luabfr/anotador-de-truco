@@ -10,7 +10,8 @@ export const colorTheme = {
 			text2: "#A6A6A6",
 			grayButtons: "#474144",
 			textHighlighted: "#FF720B",
-			sticksTeamColor: ["#FFE146", "#6DDCFF" ]
+			sticksTeamColor: ["#FFE146", "#6DDCFF"],
+			sticksTeamColorDark:["#9d892d","#45869c"]
 
 		},	
 		{
