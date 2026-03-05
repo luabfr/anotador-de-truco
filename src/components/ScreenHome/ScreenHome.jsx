@@ -23,7 +23,7 @@ const HomeScreen = ({ navigation }) => {
 
 	return (
 		<MainContainer colorModeSelected={colorModeSelected}>
-			<LogoMain /> 
+			
 
 			<AppNameTextWrap>
 				<AppNameTextL>
@@ -33,6 +33,7 @@ const HomeScreen = ({ navigation }) => {
 					{' '}de Truco
 				</AppNameTextR>
 			</AppNameTextWrap>
+			<LogoMain /> 
 			
 			<MainAllBtns>
 				<MainButtonsWrap>
@@ -44,11 +45,12 @@ const HomeScreen = ({ navigation }) => {
 					}
 					<MainButton 
 						label="Nueva partida" 
-						onPress={() => handleNewMatch() } />
+						onPress={() => handleNewMatch() } 
+						borderBottom/>
 
-					{/* <MainButton 
+					<MainButton 
 						label={"Opciones"} 
-						onPress={() => navigation.navigate('ScreenOptions')}/> */}
+						onPress={() => navigation.navigate('ScreenOptions')}/>
 				</MainButtonsWrap>
 
 				<ButtonCloseApp />		

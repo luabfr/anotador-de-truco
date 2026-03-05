@@ -7,7 +7,7 @@ const LogoContainer = styled.View`
 	justify-content: center;
   align-items: center;
 	height: 200px;
-	margin: 20px;
+	margin: 0 20px 40px 20px;
 
 	${Dimensions.get('window').height < 660 && `
     height: 140px;
