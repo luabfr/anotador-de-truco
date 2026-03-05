@@ -1,12 +1,13 @@
 import React from 'react';
-import { View,Text,Button,Linking } from 'react-native';
+import { View,Text,Linking } from 'react-native';
 import styled from 'styled-components/native';
 import { useDispatch,useSelector } from 'react-redux';
 import { setColorsPreset } from '../../store/actions';
+import { MainButton } from '../../components/Button/Button.styled';
 
 const OptionsContainer = styled.View`
 	height: 100%; 
-	background: red;
+	background: black;
 `;
 
 const Cuadrado = styled.View`
@@ -37,10 +38,10 @@ const ScreenOptions = ({ navigation }) => {
 			<Button title="Light Mode [1]" onPress={handlePress(1)} />
 			<Cuadrado />
 			<Text> {colorsPresets} </Text> */}
-			<Button title="Ir a Politicas de Privacidad" onPress={handleOpenPrivacyPolicy} />
+			<MainButton label="Ir a Politicas de Privacidad" onPress={handleOpenPrivacyPolicy} mt100 />
 		</OptionsContainer>
 
 	);
-}
+} 
 
 export default ScreenOptions

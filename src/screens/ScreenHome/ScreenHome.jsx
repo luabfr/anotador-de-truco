@@ -1,7 +1,7 @@
 import React from 'react';
-import ButtonCloseApp from '../ButtonCloseApp/ButtonCloseApp';
-import { MainButton } from '../Button/Button.styled';
-import LogoMain from '../LogoMain/LogoMain';
+import ButtonCloseApp from '../../components/ButtonCloseApp/ButtonCloseApp';
+import { MainButton } from '../../components/Button/Button.styled';
+import LogoMain from '../../components/LogoMain/LogoMain';
 import { MainContainer,MainButtonsWrap,MainAllBtns,AppNameTextL,AppNameTextR,AppNameTextWrap } from './ScreenHome.styled';
 import { useSelector,useDispatch } from 'react-redux';
 import { resetPoints } from '../../store/actions';

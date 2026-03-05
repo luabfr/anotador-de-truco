@@ -3,9 +3,9 @@ import { Provider } from 'react-redux'
 import store from './src/store/store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ScreenMatch from './src/components/ScreenMatch/ScreenMatch';
-import ScreenHome from './src/components/ScreenHome/ScreenHome';
-import ScreenOptions from './src/components/ScreenOptions/ScreenOptions';
+import ScreenMatch from './src/screens/ScreenMatch/ScreenMatch';
+import ScreenHome from './src/screens/ScreenHome/ScreenHome';
+import ScreenOptions from './src/screens/ScreenOptions/ScreenOptions';
 import { colorTheme } from './src/components/colorTheme';
 
 const RootStack = createStackNavigator();
