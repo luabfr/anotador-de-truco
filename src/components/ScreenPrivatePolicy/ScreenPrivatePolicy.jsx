@@ -18,7 +18,7 @@ Esta aplicación (“Anotador de Truco”) es desarrollada y operada por Luciano
 
 Información que recopilamos
 
-La App no recopila directamente información personal identificable como nombre, correo electrónico o dirección.
+"Anotador de Truco" no recopila directamente información personal identificable como nombre, correo electrónico o dirección.
 
 Sin embargo, terceros proveedores de servicios pueden recopilar automáticamente cierta información técnica, incluyendo:
 
@@ -34,7 +34,7 @@ Información sobre interacciones con anuncios
 
 Publicidad
 
-La App utiliza servicios de publicidad proporcionados por Google AdMob. AdMob puede recopilar y procesar datos con fines de mostrar anuncios personalizados o no personalizados.
+"Anotador de Truco" utiliza servicios de publicidad proporcionados por Google AdMob. AdMob puede recopilar y procesar datos con fines de mostrar anuncios personalizados o no personalizados.
 
 Para más información sobre cómo Google utiliza los datos, puede consultar:
 https://policies.google.com/technologies/ads
@@ -45,7 +45,7 @@ La información recopilada por terceros se utiliza para:
 
 Mostrar anuncios relevantes
 
-Mejorar el rendimiento y estabilidad de la App
+Mejorar el rendimiento y estabilidad de "Anotador de Truco"
 
 Analizar métricas de uso
 
@@ -53,7 +53,7 @@ Prevenir fraudes
 
 Compartición de información
 
-La App no vende información personal.
+"Anotador de Truco" no vende información personal.
 
 Los datos pueden ser compartidos con proveedores de servicios como Google AdMob únicamente para la prestación de servicios publicitarios y analíticos.
 
